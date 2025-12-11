@@ -14,7 +14,7 @@ More info can be found here: https://docs.astral.sh/uv/getting-started/installat
 
 2.  **Clone Github repository**:
     ```bash
-    git clone https://github.com/yourusername/llm_issue_tag_review_public.git
+    git clone https://github.com/joe-zlu/llm_issue_tag_review_public.git
     ```
  
 3.  **Create Python environment and sync dependencies**:
