@@ -358,6 +358,8 @@ with tab2:
                     csv_tags = ",".join(llm_tags_selected)
                     current_notes = row['tagging_notes'] if pd.notna(row['tagging_notes']) else ""
                     update_record(current_db, record_id, csv_tags, current_notes)
+                    # Update the session state for the reviewed tags widget so it reflects the change immediately
+                    st.session_state[f"db_view_{record_id}"] = llm_tags_selected
                     st.success("Tags confirmed and saved.")
                     st.rerun()
 
