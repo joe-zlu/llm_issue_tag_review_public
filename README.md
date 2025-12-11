@@ -4,26 +4,33 @@ Streamlit application to facilitate human review of key issue tags labelled by a
 
 ## Setup
 
-This project uses `uv` for dependency management.
+This project uses `uv` Python package manager for dependency management. 
+More info can be found here: https://docs.astral.sh/uv/getting-started/installation/
 
 1.  **Install uv** (if not already installed):
     ```bash
     curl -LsSf https://astral.sh/uv/install.sh | sh
     ```
 
-2.  **Sync dependencies**:
-    Navigate to the project directory and run:
+2.  **Clone Github repository**:
     ```bash
+    git clone https://github.com/yourusername/llm_issue_tag_review_public.git
+    ```
+ 
+3.  **Create Python environment and sync dependencies**:
+    Navigate to the project directory and sync dependencies:
+    ```bash
+    cd llm_issue_tag_review_public
     uv sync
     ```
-    This will create a virtual environment and install the required dependencies specified in `pyproject.toml`.
+    This will create a Python virtual environment and install the required dependencies specified in `pyproject.toml`.
 
 ## Deployment
 
 To run the application locally:
 
 ```bash
-uv run streamlit run main.py
+streamlit run main.py
 ```
 
 This will launch the Streamlit app in your default web browser.
@@ -78,3 +85,12 @@ Once a database is loaded, use this tab to review records.
 *   Filter the data you wish to export (Source/Label).
 *   **Option 1: Download CSV**: Exports a simplified CSV containing the Source, Label, Proposed Tags, Reviewed Tags, and Notes.
 *   **Option 2: Download Excel**: Exports the full dataset, including original columns and review data, as an `.xlsx` file.
+
+## Screenshots
+
+### Tab 1: Data Management
+![Data Management](assets/screenshots/Tab1_data_management.png)
+### Tab 2: Tag Review
+![Tag Review](assets/screenshots/Tab2_tag_review.png)
+### Tab 3: Export Data  
+![Export Data](assets/screenshots/Tab3_export_data.png)
